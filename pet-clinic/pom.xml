@@ -11,6 +11,7 @@
 	<groupId>dw.pc</groupId>
 	<artifactId>pet-clinic</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
 	<name>pet-clinic</name>
 	<description>Pet Clinic</description>
 
