@@ -1,4 +1,4 @@
-package dw.pc.petclinic.model;
+package dw.pc.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,12 +9,11 @@ import lombok.Data;
 
 @Entity
 @Data
-public class Person {
+public class PetType {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	private String firstName;
-	private String lastName;
+	private String name;
 	
 }

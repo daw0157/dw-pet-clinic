@@ -1,4 +1,4 @@
-package dw.pc.petclinic;
+package dw.pc.web;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
