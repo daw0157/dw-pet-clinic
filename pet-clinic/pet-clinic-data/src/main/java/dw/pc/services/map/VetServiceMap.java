@@ -2,9 +2,12 @@ package dw.pc.services.map;
 
 import java.util.Set;
 
+import org.springframework.stereotype.Service;
+
 import dw.pc.model.Vet;
 import dw.pc.services.VetService;
 
+@Service
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 	
 	@Override

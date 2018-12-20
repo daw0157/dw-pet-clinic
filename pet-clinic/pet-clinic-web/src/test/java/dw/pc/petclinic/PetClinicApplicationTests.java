@@ -5,7 +5,7 @@ import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import dw.pc.web.PetClinicApplication;
+import dw.pc.PetClinicApplication;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = PetClinicApplication.class)
