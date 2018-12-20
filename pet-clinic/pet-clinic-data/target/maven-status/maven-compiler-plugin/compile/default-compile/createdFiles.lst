@@ -1,0 +1,14 @@
+dw\pc\model\Person.class
+dw\pc\model\Pet.class
+dw\pc\services\OwnerService.class
+dw\pc\model\BaseEntity.class
+dw\pc\services\map\OwnerServiceMap.class
+dw\pc\model\Owner.class
+dw\pc\services\CrudService.class
+dw\pc\model\Vet.class
+dw\pc\services\map\AbstractMapService.class
+dw\pc\services\map\VetServiceMap.class
+dw\pc\services\VetService.class
+dw\pc\services\map\PetServiceMap.class
+dw\pc\model\PetType.class
+dw\pc\services\PetService.class
