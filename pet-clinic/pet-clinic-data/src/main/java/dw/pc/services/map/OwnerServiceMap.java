@@ -3,9 +3,9 @@ package dw.pc.services.map;
 import java.util.Set;
 
 import dw.pc.model.Owner;
-import dw.pc.services.CrudService;
+import dw.pc.services.OwnerService;
 
-public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements CrudService<Owner, Long> {
+public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
 	@Override
 	public Set<Owner> findAll(){
@@ -30,6 +30,11 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
 	@Override
 	public void deleteById(Long id) {
 		super.deleteById(id);
+	}
+
+	@Override
+	public Owner findByLastName(String lastName) {
+		return null;
 	}
 	
 }

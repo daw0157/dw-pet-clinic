@@ -2,11 +2,10 @@ package dw.pc.services.map;
 
 import java.util.Set;
 
-import dw.pc.model.Pet;
 import dw.pc.model.Vet;
-import dw.pc.services.CrudService;
+import dw.pc.services.VetService;
 
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 	
 	@Override
 	public Set<Vet> findAll() {

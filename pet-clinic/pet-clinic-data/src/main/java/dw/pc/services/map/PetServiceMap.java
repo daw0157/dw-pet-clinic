@@ -3,9 +3,9 @@ package dw.pc.services.map;
 import java.util.Set;
 
 import dw.pc.model.Pet;
-import dw.pc.services.CrudService;
+import dw.pc.services.PetService;
 
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
+public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
 
 	@Override
 	public Set<Pet> findAll() {
