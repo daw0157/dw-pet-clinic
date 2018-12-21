@@ -1,6 +1,9 @@
 package dw.pc.model;
 
 public class PetType extends BaseEntity {
+	
+	public static final String DOG = "Dog";
+	public static final String CAT = "Cat";
 
 	private String name;
 
