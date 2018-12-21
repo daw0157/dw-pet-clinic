@@ -1,31 +1,23 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>dw.pc</groupId>
     <artifactId>pet-clinic</artifactId>
     <version>0.0.1</version>
   </parent>
   
-  <artifactId>pet-clinic-web</artifactId>
-  
-  <properties>
+  <modelVersion>4.0.0</modelVersion>
 
-    <!-- Generic properties -->
-    <java.version>1.8</java.version>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <artifactId>pet-clinic-web</artifactId>
 
-    <!-- Web dependencies -->
-    <webjars-bootstrap.version>3.3.6</webjars-bootstrap.version>
-    <webjars-jquery-ui.version>1.11.4</webjars-jquery-ui.version>
-    <webjars-jquery.version>2.2.4</webjars-jquery.version>
-    <wro4j.version>1.8.0</wro4j.version>
+    <properties>
+        <!-- Web dependencies -->
+        <webjars-bootstrap.version>3.3.6</webjars-bootstrap.version>
+        <webjars-jquery-ui.version>1.11.4</webjars-jquery-ui.version>
+        <webjars-jquery.version>2.2.4</webjars-jquery.version>
+        <wro4j.version>1.8.0</wro4j.version>
+    </properties>
 
-    <jacoco.version>0.8.2</jacoco.version>
-
-  </properties>
-  
-  <dependencies>
+    <dependencies>
         <dependency>
             <artifactId>pet-clinic-data</artifactId>
             <groupId>dw.pc</groupId>
@@ -51,25 +43,27 @@
             <scope>runtime</scope>
         </dependency>
 
-		<dependency>
-	      <groupId>org.webjars</groupId>
-	      <artifactId>webjars-locator-core</artifactId>
-	    </dependency>
-	    <dependency>
-	      <groupId>org.webjars</groupId>
-	      <artifactId>jquery</artifactId>
-	      <version>${webjars-jquery.version}</version>
-	    </dependency>
-	    <dependency>
-	      <groupId>org.webjars</groupId>
-	      <artifactId>jquery-ui</artifactId>
-	      <version>${webjars-jquery-ui.version}</version>
-	    </dependency>
-	    <dependency>
-	      <groupId>org.webjars</groupId>
-	      <artifactId>bootstrap</artifactId>
-	      <version>${webjars-bootstrap.version}</version>
-	    </dependency>
+        <!-- webjars -->
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>webjars-locator-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>jquery</artifactId>
+            <version>${webjars-jquery.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>jquery-ui</artifactId>
+            <version>${webjars-jquery-ui.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>bootstrap</artifactId>
+            <version>${webjars-bootstrap.version}</version>
+        </dependency>
+        <!-- end of webjars -->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -77,7 +71,7 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-    
+
     <build>
         <plugins>
             <plugin>
@@ -105,6 +99,11 @@
                         <artifactId>bootstrap</artifactId>
                         <version>${webjars-bootstrap.version}</version>
                     </dependency>
+                    <dependency>
+				        <groupId>org.mockito</groupId>
+				        <artifactId>mockito-core</artifactId>
+				        <version>2.18.0</version>
+				    </dependency>
                 </dependencies>
             </plugin>
         </plugins>
