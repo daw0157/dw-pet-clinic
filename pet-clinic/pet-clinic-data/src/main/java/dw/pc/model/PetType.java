@@ -22,6 +22,4 @@ public class PetType extends BaseEntity {
 		this.name = name;
 	}
 	
-	
-	
 }
