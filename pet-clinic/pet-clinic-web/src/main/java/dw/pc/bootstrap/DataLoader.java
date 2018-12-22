@@ -53,8 +53,6 @@ public class DataLoader implements CommandLineRunner{
 		cat.setName(PetType.CAT);
 		petTypeService.save(cat);
 		
-		
-		
 		Owner owner1 = new Owner();
         owner1.setFirstName("Michael");
         owner1.setLastName("Weston");
