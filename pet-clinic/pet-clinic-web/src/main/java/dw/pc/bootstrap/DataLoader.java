@@ -10,10 +10,12 @@ import dw.pc.model.Pet;
 import dw.pc.model.PetType;
 import dw.pc.model.Specialty;
 import dw.pc.model.Vet;
+import dw.pc.model.Visit;
 import dw.pc.services.OwnerService;
 import dw.pc.services.PetTypeService;
 import dw.pc.services.SpecialtyService;
 import dw.pc.services.VetService;
+import dw.pc.services.VisitService;
 
 @Component
 public class DataLoader implements CommandLineRunner{
@@ -22,14 +24,16 @@ public class DataLoader implements CommandLineRunner{
 	private final VetService vetService;
 	private final PetTypeService petTypeService;
 	private final SpecialtyService specialtyService;
+	private final VisitService visitService;
 
 	public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService,
-			SpecialtyService specialtyService) {
+			SpecialtyService specialtyService, VisitService visitService) {
 		super();
 		this.ownerService = ownerService;
 		this.vetService = vetService;
 		this.petTypeService = petTypeService;
 		this.specialtyService = specialtyService;
+		this.visitService = visitService;
 	}
 
 	@Override
@@ -49,7 +53,7 @@ public class DataLoader implements CommandLineRunner{
 		cat.setName(PetType.CAT);
 		petTypeService.save(cat);
 		
-		System.out.println("Loaded Pet Types...." + petTypeService.findAll().size());
+		
 		
 		Owner owner1 = new Owner();
         owner1.setFirstName("Michael");
@@ -89,7 +93,11 @@ public class DataLoader implements CommandLineRunner{
         owner3.setTelephone("555-231-4178");
         ownerService.save(owner3);
 
-        System.out.println("Loaded Owners...." + ownerService.findAll().size());
+        Visit catVisit = new Visit();
+        catVisit.setPet(fionasCat);
+        catVisit.setDate(LocalDate.now());
+        catVisit.setDescription("checkup");
+        visitService.save(catVisit);
         
         Specialty radio = new Specialty();
         radio.setDescription("Radiology");
@@ -103,7 +111,6 @@ public class DataLoader implements CommandLineRunner{
         surgery.setDescription("Surgery");
         specialtyService.save(surgery);
         
-        System.out.println("Loaded Specialties...." + specialtyService.findAll().size());
 
         Vet vet1 = new Vet();
         vet1.setFirstName("Sam");
@@ -118,7 +125,11 @@ public class DataLoader implements CommandLineRunner{
         vet2.getSpecialties().add(surgery);
         vetService.save(vet2);
 
+        System.out.println("Loaded Pet Types...." + petTypeService.findAll().size());
+        System.out.println("Loaded Owners...." + ownerService.findAll().size());
+        System.out.println("Loaded Specialties...." + specialtyService.findAll().size());
 	    System.out.println("Loaded Vets...." + vetService.findAll().size());
+	    System.out.println("Loaded Visits...." + visitService.findAll().size());
 	}
 
 }

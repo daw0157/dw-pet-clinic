@@ -3,15 +3,14 @@ package dw.pc.services.springdatajpa;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.persistence.Entity;
-
 import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Service;
 
 import dw.pc.model.Specialty;
 import dw.pc.repositories.SpecialtyRepository;
 import dw.pc.services.SpecialtyService;
 
-@Entity
+@Service
 @Profile("springdatajpa")
 public class SpecialtyServiceSDJpa implements SpecialtyService {
 

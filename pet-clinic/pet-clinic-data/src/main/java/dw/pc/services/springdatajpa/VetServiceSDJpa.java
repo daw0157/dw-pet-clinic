@@ -6,7 +6,6 @@ import java.util.Set;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
-import dw.pc.model.Owner;
 import dw.pc.model.Vet;
 import dw.pc.repositories.VetRepository;
 import dw.pc.services.VetService;
